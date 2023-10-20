@@ -23,8 +23,33 @@
     margin-bottom: -0.3rem;
 }
 
+
 .txnbtn{
     width: 20rem;
     height: 3rem;
+    border: 2px solid #FFDC20;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    color: white;
+    background: linear-gradient(45deg, #3F1A4E, #00000060);
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+
+.inp{
+    background-color: #070945;
+    color: white;
+    width: 19.5rem;
+    border: 2px solid #FFDC20;
+    border-radius: 0.2rem;
+    height: 1.5rem;
+}
+
+.selectchain{
+    width: 20rem;
+    height: 1.5rem;
+    color: white;
+    background-color: #070945;
     border: 2px solid #FFDC20;
 }

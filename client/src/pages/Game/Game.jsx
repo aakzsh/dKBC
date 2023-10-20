@@ -1,7 +1,21 @@
+import logo from "../../images/dKBC.svg";
 
 const Game = () =>{
     return (
-        <p>Game</p>
+        
+        <div>
+            <div style={{"float": "right", "padding": "1rem"}}>
+                <p>Logged in as {"hemhe"}</p>
+            </div>
+            <div>
+                <div>
+                    <img src={logo} alt="" />
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
     )
 }
 
