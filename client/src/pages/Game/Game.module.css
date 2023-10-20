@@ -1,0 +1,92 @@
+.rounded{
+    height: 5rem;
+    width: 5rem;
+    /* background-color: orange; */
+    background-image: radial-gradient(#3F1A4E, black);
+    border-radius: 10rem;
+    border: 2px solid #FFDC20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.helplines{
+    display: flex;
+    gap: 2rem;
+    margin-left: 2rem;
+}
+
+.left{
+    width: 70vw;
+    /* background-color: orange; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-top: 4rem;
+    gap: 1rem;
+}
+
+.right{
+    width: 25vw;
+    /* background-color: pink; */
+    position: fixed;
+    right: 2rem;
+    top: 5rem;
+}
+
+.levels{
+    width: 23vw;
+    height: 85vh;
+    border:2px solid #FFDC20;
+    border-radius: 1rem;
+    display: flex;
+    overflow: auto;
+    flex-direction: column-reverse;
+    background: linear-gradient(45deg, #3F1A4E, #00000060);
+}
+
+.questbox{
+    width: 60vw;
+    height: 4rem;
+    /* background-color: red; */
+    background-image: radial-gradient(#3F1A4E, black);
+    border: 2px solid #FFDC20;
+}
+
+.options{
+    width: 30vw;
+    height: 4rem;
+    /* background-color: red; */
+    background-image: radial-gradient(#3F1A4E, black);
+    border: 2px solid #FFDC20;
+}
+
+.listedoptions{
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 4.7rem;
+}
+
+.questions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* 
+.content{
+    display: flex;
+} */
+
+.levelshow{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 700;
+    color: #FFC120;
+    margin-top: -0.5rem;
+    
+}
