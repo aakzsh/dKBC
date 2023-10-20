@@ -3,27 +3,15 @@ import logo from "../../images/dKBC.svg";
 const Payment = () => {
   return (
     <div className={styles.body}>
-     <div className={styles.dkbcdiv}>
-     <p className={styles.dkbc}>dKBC</p>
-    <img src={logo} className={styles.imglogo} alt="" />
-
-     </div>
-      <button className={styles.zkloginbtn}>ZKLOGIN WITH SUI</button>
-     
-      <div className={styles.bottomwrapper}>
-      <div className={styles.bottom}>
-      <h3 className={styles.title}>decentralized Kaun Banega Crorepati</h3>
-      <p className={styles.subtitle}>
-        A decentralized and actually rewarding version of the infamous Kaun
-        Banega Crorepati Game! login anonymously. test out your knowledge. win
-        money in crypto
-      </p>
-      <div className={styles.btnswrapper}>
-        <button className={styles.actionbtn}>PLAY NOW</button>
-        <button className={styles.actionbtn}>RULES</button>
-      </div>
-      </div>
-      </div>
+        <div className={styles.popup}>
+            <h2 className={styles.congrats}>CONGRATULATIONS!</h2>
+            <p>You've won 0.5000 AVAX coins</p>
+            <br />
+            <p>Complete payment through</p>
+            <i><p>You'll receive approximately 0.32 ETH</p></i>
+            <input type="text" placeholder="enter your crypto wallet address"/>
+            <button className={styles.txnbtn}>COMPLETE TRANSACTION</button>
+        </div>
     </div>
   );
 };
