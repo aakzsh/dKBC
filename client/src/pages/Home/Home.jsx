@@ -3,7 +3,9 @@ import logo from "../../images/dKBC.svg";
 import { generateNonce, generateRandomness } from "@mysten/zklogin";
 import { Ed25519Keypair } from "@mysten/sui.js/keypairs/ed25519";
 import { SuiClient, getFullnodeUrl } from "@mysten/sui.js/client";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const navigate = useNavigate()
   function openGoogleAuthWindow(url) {
     const popup = window.open(url, "Google Auth", "width=400,height=600");
     const checkPopupStatus = setInterval(() => {
@@ -54,7 +56,7 @@ const Home = () => {
         <p className={styles.dkbc}>dKBC</p>
         <img src={logo} className={styles.imglogo} alt="" />
       </div>
-      <button className={styles.zkloginbtn}>ZKLOGIN WITH SUI</button>
+      <button className={styles.zkloginbtn}  onClick={() => zklogin()} > ZKLOGIN WITH SUI</button>
 
       <div className={styles.bottomwrapper}>
         <div className={styles.bottom}>
@@ -68,7 +70,7 @@ const Home = () => {
             <button onClick={() => zklogin()} className={styles.actionbtn}>
               PLAY NOW
             </button>
-            <button className={styles.actionbtn}>RULES</button>
+            <button className={styles.actionbtn} onClick={()=>navigate('/rules')}>RULES</button>
           </div>
         </div>
       </div>

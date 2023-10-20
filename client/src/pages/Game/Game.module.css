@@ -12,12 +12,14 @@
 }
 
 .helplines{
+
     display: flex;
     gap: 2rem;
     margin-left: 2rem;
 }
 
 .left{
+    position: fixed;
     width: 70vw;
     /* background-color: orange; */
     display: flex;
@@ -45,6 +47,14 @@
     overflow: auto;
     flex-direction: column-reverse;
     background: linear-gradient(45deg, #3F1A4E, #00000060);
+}
+
+.levels {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.levels::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
 .questbox{

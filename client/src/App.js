@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import Home from "./pages/Home/Home";
 import Game from "./pages/Game/Game";
 import Payment from "./pages/Payment/Payment";
+import Rules from "./pages/Rules/Rules";
 
 function App() {
   useEffect(() => {
@@ -51,6 +52,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/game" element={<Game />} />
         <Route path="/payment" element={<Payment />} />
+		<Route path="/rules" element={<Rules />} />
       </Routes>
     </BrowserRouter>
   );
