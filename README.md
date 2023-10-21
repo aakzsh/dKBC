@@ -6,7 +6,7 @@ login anonymously. test out your knowledge. win money in crypto
 Here are the given steps:-
 
 1. Install ganache locally
-2. Clone the repository ```git clone https://github.com/aakzsh/dKBC``
+2. Clone the repository ```git clone https://github.com/aakzsh/dKBC```
 3. ```cd client``` then ```npm i``` then ```npm start```
 5. Now, we can host smart contracts using Remix IDE
 6. Replace contracts folder and deploy the app
