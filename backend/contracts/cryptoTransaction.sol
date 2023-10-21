@@ -1,5 +1,6 @@
+
 // SPDX-License-Identifier: GPL-3.0 
-pragma solidity >=0.8.0 <0.9.0; 
+pragma solidity >=0.8.0 <0.9.0;  
 /// @title A contract for demonstrate how to build a to-do list application
 /// @notice For now, this contract just show how to add/delete/get/update/count the task
 contract smartContracts{
@@ -39,16 +40,14 @@ contract smartContracts{
         ));
     }
 
-    function getQuestion(uint level) external returns (Question memory) {
+     function getQuestion(uint level) external view returns (Question memory) {
         uint currentLevelQuestioncount = questions[level].length;
         uint randomNum = generateRandomNumber(currentLevelQuestioncount);
 
         return questions[level][randomNum];
-
     }
 
-    function generateRandomNumber(uint n) public  view returns (uint) {
-        return uint(keccak256(abi.encodePacked(block.timestamp,block.difficulty,  
-        msg.sender))) % n;
+    function generateRandomNumber(uint n) public view returns (uint) {
+        return uint(keccak256(abi.encodePacked(block.timestamp,block.difficulty,msg.sender))) % n;
     }
 }
