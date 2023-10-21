@@ -2,13 +2,16 @@ import { useEffect, useState } from "react";
 import logo from "../../images/dKBC.svg";
 import styles from "./Game.module.css"
 import { useParams } from 'react-router-dom';
+import fifty from "../../images/5050.svg"
+import audience from "../../images/audience.svg"
+import MoneyLevel from "../../components/MoneyLevel/MoneyLevel";
 
 const Game = () =>{
     let levels = [0.0001, 0.0002, 0.0003, 0.0005, 0.001, 0.002, 0.004, 0.008, 0.016, 0.032, 0.064, 0.125, 0.250, 0.500, 1];
  
         const params = useParams();
     const [token, setToken] = useState("eyJhbGciOiJSUzI1NiIsImtpZCI6IjdkMzM0NDk3NTA2YWNiNzRjZGVlZGFhNjYxODRkMTU1NDdmODM2OTMiLCJ0eXAiOiJKV1QifQ")
-    
+    const [selected, setSelected] = useState(0)
     useEffect(()=>{
         async function getToken(){
             const url = window.location.toString();
@@ -42,8 +45,8 @@ const Game = () =>{
                 <div className={styles.left}>
                     <img src={logo} alt="" />
                     <div className={styles.helplines}>
-                        <div className={styles.rounded}><p>50/50</p></div>
-                        <div className={styles.rounded}><p>Aud. poll</p></div>
+                        <div className={styles.rounded}><img src={fifty} className={styles.lifelineicon} alt="" /></div>
+                        <div className={styles.rounded}><img src={audience} className={styles.lifelineicon} alt="" /></div>
                         {/* <div className={styles.rounded}><p>10</p></div> */}
                     </div>
                     <div className={styles.questions}>
@@ -70,9 +73,8 @@ const Game = () =>{
                     <div className={styles.levels}>
                         {
                             levels.map((el, index)=>{
-                                return <div className={styles.levelshow}><p>{el + " AVAX"}</p>
-                                <p>{index+1}</p>
-                                </div>
+                                return <MoneyLevel index={index} el={el} selected={selected}/>
+                                
                             })
                         }
                     </div>
