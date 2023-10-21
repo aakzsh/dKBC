@@ -9,13 +9,14 @@
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .helplines{
 
     display: flex;
     gap: 2rem;
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
 }
 
 .left{
@@ -77,7 +78,7 @@
     margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 4.7rem;
+    margin-left: 5vw;
 }
 
 .questions{
@@ -91,12 +92,29 @@
     display: flex;
 } */
 
-.levelshow{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+
+.questext{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.optionstext{
+    margin-left: 0.5rem;
+}
+
+.dkbc{
+    position: fixed;
+    top: -30rem;
+
+    text-align: center;
+    /* margin-top: -2rem; */
+    font-size: 25rem;
+    color: rgb(255, 255, 255, 0.04);
+    /* position: fixed; */
     font-weight: 700;
-    color: #FFC120;
-    margin-top: -0.5rem;
-    
+    z-index: 0;
+}
+
+.lifelineicon{
+    height: 2.5rem;
 }

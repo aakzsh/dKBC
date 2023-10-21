@@ -3,6 +3,9 @@ import logo from "../../images/dKBC.svg";
 import styles from "./Game.module.css"
 import { useParams } from 'react-router-dom';
 import Web3 from 'web3';
+import fifty from "../../images/5050.svg"
+import audience from "../../images/audience.svg"
+import MoneyLevel from "../../components/MoneyLevel/MoneyLevel";
 
 const Game = () =>{
     let levels = [0.0001, 0.0002, 0.0003, 0.0005, 0.001, 0.002, 0.004, 0.008, 0.016, 0.032, 0.064, 0.125, 0.250, 0.500, 1];
@@ -142,26 +145,26 @@ const Game = () =>{
                 <div className={styles.left}>
                     <img src={logo} alt="" />
                     <div className={styles.helplines}>
-                        <div className={styles.rounded}></div>
-                        <div className={styles.rounded}></div>
-                        <div className={styles.rounded}><p>10</p></div>
+                        <div className={styles.rounded}><img src={fifty} className={styles.lifelineicon} alt="" /></div>
+                        <div className={styles.rounded}><img src={audience} className={styles.lifelineicon} alt="" /></div>
+                        {/* <div className={styles.rounded}><p>10</p></div> */}
                     </div>
                     <div className={styles.questions}>
                         <div className={styles.questbox}>
-
+                            <h4 className={styles.questext}>Question here smth smth</h4>
                         </div>
                         <div className={styles.listedoptions}>
                         <div className={styles.options}>
-                            <p>A.</p>
+                            <p className={styles.optionstext}>A.</p>
                         </div>
                         <div className={styles.options}>
-                            <p>A.</p>
+                            <p className={styles.optionstext}>B.</p>
                         </div>
                         <div className={styles.options}>
-                            <p>A.</p>
+                            <p className={styles.optionstext}>C.</p>
                         </div>
                         <div className={styles.options}>
-                            <p>A.</p>
+                            <p className={styles.optionstext}>D.</p>
                         </div>
                         </div>
                     </div>
@@ -170,9 +173,8 @@ const Game = () =>{
                     <div className={styles.levels}>
                         {
                             levels.map((el, index)=>{
-                                return <div className={styles.levelshow}><p>{el + " AVAX"}</p>
-                                <p>{index+1}</p>
-                                </div>
+                                return <MoneyLevel index={index} el={el} selected={selected}/>
+                                
                             })
                         }
                     </div>
