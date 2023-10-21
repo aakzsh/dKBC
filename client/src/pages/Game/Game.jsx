@@ -42,26 +42,26 @@ const Game = () =>{
                 <div className={styles.left}>
                     <img src={logo} alt="" />
                     <div className={styles.helplines}>
-                        <div className={styles.rounded}></div>
-                        <div className={styles.rounded}></div>
-                        <div className={styles.rounded}><p>10</p></div>
+                        <div className={styles.rounded}><p>50/50</p></div>
+                        <div className={styles.rounded}><p>Aud. poll</p></div>
+                        {/* <div className={styles.rounded}><p>10</p></div> */}
                     </div>
                     <div className={styles.questions}>
                         <div className={styles.questbox}>
-
+                            <h4 className={styles.questext}>Question here smth smth</h4>
                         </div>
                         <div className={styles.listedoptions}>
                         <div className={styles.options}>
-                            <p>A.</p>
+                            <p className={styles.optionstext}>A.</p>
                         </div>
                         <div className={styles.options}>
-                            <p>A.</p>
+                            <p className={styles.optionstext}>B.</p>
                         </div>
                         <div className={styles.options}>
-                            <p>A.</p>
+                            <p className={styles.optionstext}>C.</p>
                         </div>
                         <div className={styles.options}>
-                            <p>A.</p>
+                            <p className={styles.optionstext}>D.</p>
                         </div>
                         </div>
                     </div>
